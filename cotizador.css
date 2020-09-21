@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: url(./img/cotizador2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.error {
+    background-color: #FBE9E7;
+    border: 1px solid #F4511E;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #F4511E;
+}
+.error p {
+    margin:0;
+}
+.titulo{
+    text-align: center;
+    margin-top: 30px;
+}
+h2{
+    font-size: 20px;
+}
+form{
+    height: auto;
+    background: white;
+    width: 30%;
+    margin: 60px auto;
+    border-radius: 10px;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
+/* caja de opciones */
+
+.option{
+    width: 60%;
+    border: none;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.radio{
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    color: #2b2e2e;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.radio + .radio{
+    margin-left: 20px;
+}
+.radio input[type = 'radio']{
+    display: none;
+}
+.radio span{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #00aeef;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+.radio span:after{
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #00aeef;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+.radio input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%, -50%) scale(1);
+}
+/* Boton de cotizar */
+.btn{
+    display: flex;
+    padding: 10px 23px;
+    border-radius: 10px;
+    background-color: #aebebb;
+}
+/* gif */
+#cargando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#cargando img {
+    display: none;
+    margin: 0 auto;
+}
+/* resultado */
+#resultado  {
+    margin-bottom: 40px;
+    width: 80%;
+}
+#resultado div {
+    border: 1px solid #5c6664;
+    text-align: center;
+    /* padding: 0  0 20px 0; */
+}
+#resultado div p {
+    margin-bottom: 0;
+}
+#resultado div p.header {
+    background-color: #5c6664;
+    margin-bottom: 10px;
+    color:white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+/* diseño adaptable */
+
+@media screen and (max-width:1300px){
+    form{
+        width: 40%;
+    }
+    .option{
+        width:50%;
+    }
+    .radio{
+        font-size: 18px;
+    }
+    #resultado  {
+        margin-top: 30px;
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width:950px){
+    form{
+        width: 50%;
+    }
+    .option{
+        width:50%;
+    }
+    select{
+        width: 20%;
+        font-size: .8em;
+    }
+    .select{
+        width: 15em;
+    }
+}
+@media screen and (max-width:750px){
+    form{
+        width: 60%;
+    }
+}
+@media screen and (max-width:630px){
+    form{
+        width: 65%;
+    }
+    .radio{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+    .radio{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:300px){
+    form{
+        width: 80%;
+    }
+    .radio{
+        font-size: 12px;
+    }
+    .select{
+        width: 15em;
+        font-size: .8em;
+    }
+}
+
+

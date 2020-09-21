@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cotizador.css">
+    <title>Cotizador de Viaje</title>
+</head>
+<body>
+    <header class="titulo">
+        <h1>Cotiza tu Viaje</h1>
+    </header>
+    <main>
+        <form action="#" id="cotiza-viaje" class="contenedor formulario">
+            <h2>Personas</h2>
+            <div class="">
+            <div class="select">
+                <select name="format" id="personas">
+                    <option selected disabled value="">Numero de personas</option>
+                    <option value="1">1-4</option>
+                    <option value="2">5-7</option>
+                    <option value="3">8-14</option>
+                    <option value="4">15-20</option>
+                </select>
+            </div>
+            </div>
+            <h2>Origen</h2>
+            <div class="">
+            <div class="select">
+                <select name="format" id="origen">
+                    <option selected disabled value="">Lugar de Origen</option>
+                    <option value="1">CDMX</option>
+                    <option value="2">EDOMEX</option>
+                </select>
+            </div>
+            </div>
+            <div class="">
+            <h2>Destino</h2>
+            <div class="select">
+                <select name="format" id="destino">
+                    <option selected disabled value="">Lugar de Destino</option>
+                    <option value="1">Tepotzotlan</option>
+                    <option value="2">La Marquesa</option>
+                    <option value="3">Teotihuacan</option>
+                    <option value="4">Toluca</option>
+                    <option value="5">Tepoztlan</option>
+                    <option value="6">Ciudad de Mexico</option>
+                    <option value="7">Ciudad Universitaria y Xochimilco</option>
+                    <option value="8">Cuernavaca</option>
+                    <option value="9">Tula</option>
+                    <option value="10">Pachuca</option>
+                    <option value="11">Tlaxcala</option>
+                    <option value="12">Puebla-Centro</option>
+                    <option value="13">Basilica</option>
+                    <option value="14">Valle de Bravo</option>
+                    <option value="15">Taxco</option>
+                    <option value="16">Mariposa Monarca</option>
+                    <option value="17">Queretaro</option>
+                    <option value="18">Puebla-Cholula</option>
+                    <option value="19">Puebla-Tehuacan</option>
+                    <option value="20">San Miguel de Allende</option>
+                    <option value="21">Chilpancingo</option>
+                    <option value="22">Morelia</option>
+                    <option value="23">Xalapa</option>
+                    <option value="24">Guanajuato</option>
+                    <option value="25">Veracruz</option>
+                    <option value="26">Acapulco</option>
+                    <option value="27">San Luis Potosi</option>
+                    <option value="28">Guadalajara</option>
+                </select>
+            </div>
+            </div>
+            <fieldset class="option">
+                <legend class="tipo-viaje">Tipo de Viaje</legend>
+                <div class="botones radio-group">
+                    <label class="radio">
+                    <input type="radio" name="tipo" value="tour" checked>
+                    Tour
+                    <span></span>
+                    </label>
+                    <label class="radio">
+                    <input type="radio" name="tipo" value="transfer">
+                    Transfer
+                    <span></span>
+                    </label>
+                </div>
+            </fieldset>
+
+                <div id="cargando">
+                    <img src="img/spinner.gif">
+                </div>
+                <div id="resultado"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Cotizar </button>
+                </div>
+        </form>
+    </main>
+    <script src="cotizador.js"></script>
+</body>
+</html>
